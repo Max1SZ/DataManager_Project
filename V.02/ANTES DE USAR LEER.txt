@@ -1,0 +1,5 @@
+Resumen rápido del código: 
+*Maneja los datos de los csvs y hace varias cosas 
+*Tenes que poner la ruta completa de donde esten 
+*En caso que cambies de PC cambiar ruta
+*Meter DatabaseFiller en htdocs porfa y cambiar dirección si es necesario

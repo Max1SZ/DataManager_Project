@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú de Carga de Datos</title>
+</head>
+<body style="background-color: rgb(15, 13, 17); color: white; font-family: Arial, sans-serif;">
+    <h1>Menú de Carga de Datos</h1>
+    <h2>no olvides poner http://localhost/database_filler/index.html para evitar errores</h2>
+    <h3>tampoco olvides poner la carpeta en htdocs del xampp.</h3>
+    <h3>importar tmb la base de datos en phpmyadmin</h3>
+    <nav>
+        <ul>
+            <li><a href="#clientes">Agregar Cliente</a></li>
+            <li><a href="#productos">Agregar Producto</a></li>
+            <li><a href="#facturas">Agregar Factura</a></li>
+            <li><a href="#facturas_det">Agregar Detalle de Factura</a></li>
+            <li><a href="#ventas">Agregar Venta</a></li>
+            <li><a href="#provincias">Agregar Provincia</a></li>
+            <li><a href="#localidades">Agregar Localidad</a></li>
+            <li><a href="#sucursales">Agregar Sucursal</a></li>
+            <li><a href="#rubros">Agregar Rubro</a></li>
+        </ul>
+    </nav>
+
+    <section id="clientes">
+        <h2>Agregar Cliente</h2>
+        <form action="functions.php" method="post">
+            <input type="hidden" name="tabla" value="clientes">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="apellido" placeholder="Apellido" required>
+            <input type="email" name="email" placeholder="Email">
+            <input type="text" name="telefono" placeholder="Teléfono">
+            <input type="text" name="direccion" placeholder="Dirección">
+            <input type="number" name="id_localidad" placeholder="ID Localidad" required>
+            <button type="submit">Agregar</button>
+        </form>
+    </section>
+
+    <section id="productos">
+        <h2>Agregar Producto</h2>
+        <form action="functions.php" method="post">
+            <input type="hidden" name="tabla" value="productos">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="descripcion" placeholder="Descripción">
+            <input type="number" step="0.01" name="precio" placeholder="Precio" required>
+            <input type="number" name="stock" placeholder="Stock">
+            <input type="number" name="id_rubro" placeholder="ID Rubro" required>
+            <button type="submit">Agregar</button>
+        </form>
+    </section>
+
+    <section id="facturas">
+        <h2>Agregar Factura</h2>
+        <form action="functions.php" method="post">
+            <input type="hidden" name="tabla" value="facturas_enc">
+            <input type="date" name="fecha" required>
+            <input type="number" name="id_cliente" placeholder="ID Cliente" required>
+            <input type="number" name="id_sucursal" placeholder="ID Sucursal" required>
+            <input type="number" step="0.01" name="total" placeholder="Total" required>
+            <button type="submit">Agregar</button>
+        </form>
+    </section>
+
+    <section id="facturas_det">
+        <h2>Agregar Detalle de Factura</h2>
+        <form action="functions.php" method="post">
+            <input type="hidden" name="tabla" value="facturas_det">
+            <input type="number" name="id_factura" placeholder="ID Factura" required>
+            <input type="number" name="id_producto" placeholder="ID Producto" required>
+            <input type="number" name="cantidad" placeholder="Cantidad" required>
+            <input type="number" step="0.01" name="precio_unitario" placeholder="Precio Unitario" required>
+            <input type="number" step="0.01" name="subtotal" placeholder="Subtotal" required>
+            <button type="submit">Agregar</button>
+        </form>
+    </section>
+
+    <section id="ventas">
+        <h2>Agregar Venta</h2>
+        <form action="functions.php" method="post">
+            <input type="hidden" name="tabla" value="ventas">
+            <input type="number" name="id_sucursal" placeholder="ID Sucursal" required>
+            <input type="number" name="id_producto" placeholder="ID Producto" required>
+            <input type="date" name="fecha" required>
+            <input type="number" name="cantidad" placeholder="Cantidad" required>
+            <input type="number" step="0.01" name="precio_venta" placeholder="Precio Venta" required>
+            <button type="submit">Agregar</button>
+        </form>
+    </section>
+
+    <section id="provincias">
+        <h2>Agregar Provincia</h2>
+        <form action="functions.php" method="post">
+            <input type="hidden" name="tabla" value="provincias">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <button type="submit">Agregar</button>
+        </form>
+    </section>
+
+    <section id="localidades">
+        <h2>Agregar Localidad</h2>
+        <form action="functions.php" method="post">
+            <input type="hidden" name="tabla" value="localidades">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="number" name="id_provincia" placeholder="ID Provincia" required>
+            <button type="submit">Agregar</button>
+        </form>
+    </section>
+
+    <section id="sucursales">
+        <h2>Agregar Sucursal</h2>
+        <form action="functions.php" method="post">
+            <input type="hidden" name="tabla" value="sucursales">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="direccion" placeholder="Dirección">
+            <input type="number" name="id_localidad" placeholder="ID Localidad" required>
+            <button type="submit">Agregar</button>
+        </form>
+    </section>
+
+    <section id="rubros">
+        <h2>Agregar Rubro</h2>
+        <form action="functions.php" method="post">
+            <input type="hidden" name="tabla" value="rubros">
+            <input type="text" name="descripcion" placeholder="Descripción" required>
+            <button type="submit">Agregar</button>
+        </form>
+    </section>
+</body>
+</html>

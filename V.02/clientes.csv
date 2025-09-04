@@ -1,0 +1,4 @@
+id_cliente,nombre,apellido,email,telefono,direccion,id_localidad
+1.0,maximiliano,zapata,maxizapata@gmail.com,1.0,115,2.0
+2.0,mariano,gordillo,marianoelnegro@gmail.com,13333.0,calle 13,2.0
+3.0,nicolas,martinez,nicoellol@gmail.com,22211.0,12,2.0
