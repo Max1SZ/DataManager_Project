@@ -1,0 +1,4 @@
+id_producto,nombre,descripcion,precio,stock,id_rubro
+1,tv,samsung,3500.0,10,1
+2,samson,nextel,15000.0,10,1
+3,celular,iPhone 13 Plus,200000,30,1
