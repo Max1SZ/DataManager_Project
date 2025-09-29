@@ -4,4 +4,5 @@ Guia rapida:
 pero vos tenes que poner la propia ruta donde se encuentren los csvs 
 (en este caso, con la carpeta en la que este archivo se encuentra)
 
-*tener xampp conectado y la base de datos importada (o una extremadamente similar)
+*tener xampp conectado y la base de datos "prueba1" importada (o una extremadamente similar)
+*esa BD se encuentra en la carpeta V.02. 
